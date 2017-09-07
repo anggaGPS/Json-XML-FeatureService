@@ -1,0 +1,41 @@
+{
+  "name": "koop-provider-craigslist",
+  "version": "2.0.1",
+  "description": "A Craigslist provider for koop ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "docker-build": "docker build -t koop-craigslist .",
+    "docker-start": "docker run -it -p 8080:8080 koop-craigslist"
+  },
+  "dependencies": {
+    "config": "^1.25.1",
+    "koop": "^3.4.0",
+    "mqtt": "^2.6.2",
+    "node-opcua": "0.0.64",
+    "node-task-scheduler": "^2.2.0",
+    "request": "^2.72.0",
+    "socket.io": "^1.7.3"
+  },
+  "author": "Daniel Fenton",
+  "license": "Apache-2.0",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:dmfenton/koop-provider-craigslist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmfenton/koop-provider-craigslist/issues"
+  },
+  "homepage": "https://github.com/dmfenton/koop-provider-craigslist",
+  "keywords": [
+    "koop",
+    "provider",
+    "real estate",
+    "craigslist",
+    "apartment listings"
+  ]
+}
