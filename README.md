@@ -1,17 +1,10 @@
 convert web services into Features services arcgis using koop.js
 <<<<<<< HEAD
-# Koop-Craiglists
-## A provider for the Craigslist Apartment search API
 
-## How to use
-
-You can use this as a plugin to an existing Koop server or use the default server or docker implementations.
-
-## API Example
+## API Example BMKG webdata.bmkg.go.id/datamkg/
 
 All data can be accessed at `http://103.85.14.102:81/bmkg/:province/:type/featureserver/0`
 
-Cities follow the url subdomain for Craigslist (https://washingtondc.craigslist.org/)
 
 e.g.
 - Bali
