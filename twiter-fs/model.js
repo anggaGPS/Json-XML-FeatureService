@@ -10,7 +10,7 @@ module.exports = function () {
   this.getData = function (req, callback) {
     const city = req.params.host
     const type = req.params.id
-    request(`http://localhost/latihan/data/twiter.php?&param=${type}&city=${city}&map=1`, (err, res, body) => {
+    request(`http://analytics.mediakernels.com/api/getgeotwitterusersentiment/project_id/${type}?city=${city}&map=1`, (err, res, body) => {
       if (err) return callback(err)
       const apartments = translate(res.body)
       apartments.ttl = ttl
@@ -25,12 +25,15 @@ module.exports = function () {
 
 // Map accross all elements from a Craigslist respsonse and translate it into a feature collection
 function translate (data) {
-  const list = JSON.parse(data)
+	console.log(data)
+  const dataGet = JSON.parse(data)
+  const list = dataGet.locality.rows
+  console.log(list)
   const featureCollection = {
     type: 'FeatureCollection',
     features: []
   }
-  if (list ) {
+  if (list) {
     const apartments = list.filter(node => { return node.name })
     featureCollection.features = apartments.map(formatFeature)
   }
