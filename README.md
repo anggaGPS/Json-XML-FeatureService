@@ -1,5 +1,8 @@
 convert web services into Features services arcgis using koop.js
-<<<<<<< HEAD
+
+
+This sample is covert BMKG data public services about weather, wind direction, temperature, humadity, to Esri Feature Services on the fly.
+This project had help many project such as BMKG GIS, BNPB GIS, and Real time monitoring Mount Agung.
 
 ## API Example BMKG webdata.bmkg.go.id/datamkg/
 
